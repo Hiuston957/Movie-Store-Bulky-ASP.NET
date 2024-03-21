@@ -75,6 +75,28 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
                 }
                 
 
+                if(!string.IsNullOrEmpty(productVM.Product.ImageUrl)) 
+                { 
+                    var oldImagePatch=Path.Combine(wwwRootPatch, productVM.Product.ImageUrl.TrimStart('\\'));
+                    if(System.IO.File.Exists(oldImagePatch)) 
+                    {
+                    System.IO.File.Delete(oldImagePatch);
+                    }
+                
+                }
+
+                if(productVM.Product.Id==0) 
+                {
+                _unitOfWork.Product.Add(productVM.Product);
+                }
+                else
+                {
+                _unitOfWork.Product.Update(productVM.Product);
+                }
+
+
+
+
                 _unitOfWork.Product.Add(productVM.Product);
                 _unitOfWork.Save();
                 TempData["success"] = "Product created successfully";
