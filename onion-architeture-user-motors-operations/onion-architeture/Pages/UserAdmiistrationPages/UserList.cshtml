@@ -1,0 +1,48 @@
+﻿@page
+@model onion_architeture.Pages.UserAdmiistrationPages.UserListModel
+
+@* <p>
+    <a asp-page="Create">Create New</a>
+</p> *@
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Client[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Client[0].Surname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Client[0].Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Client[0].DrivingLicence)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Client) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Surname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DrivingLicence)
+            </td>
+            <td>
+               @*  <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> | *@
+                    <a asp-page="./DetailsUserMotor" asp-route-id="@item.Id">User current motorcycle's</a> 
+             @*    <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a> *@
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,42 @@
+﻿@page
+@model onion_architeture.Pages.MorocyclePages.MotorlistModel
+
+<p>
+    <a asp-page="MotorAdd">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Motorcycle[0].Brand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Motorcycle[0].Model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Motorcycle[0].Price)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Motorcycle) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Brand)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                <a asp-page="./MotorEdit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-page="./InsuranceDetails" asp-route-id="@item.Id">Insurance details</a> | 
+                <a asp-page="./MotorDell" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

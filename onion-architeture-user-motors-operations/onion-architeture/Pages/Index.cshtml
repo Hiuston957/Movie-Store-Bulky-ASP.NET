@@ -1,0 +1,61 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="container mt-5">
+    <div class="text-center">
+        <h1 class="display-4 mb-4">Welcome to Bicycle Rentals</h1>
+        <p class="lead mb-4">Explore the thrill of our bicycles and start your amazing journey today.</p>
+        <a class="btn btn-primary btn-lg mb-4" asp-page="/MorocyclePages/Motorlist">Start Your Journey</a>
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img src="https://media.istockphoto.com/id/481184308/photo/motorcycle-motorbike-bike-riding-rider-contemporary-black-concep.jpg?s=612x612&w=0&k=20&c=r44EW5avFZd5tSKFbHDAjWw94ccT-V1famBgvGL8dK0=" alt="Motorcycle" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Indian Motorcycle</h5>
+                        <p class="card-text">Experience the rugged charm and power of the Indian Motorcycle.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img src="https://images5.1000ps.net/images_bikekat/2024/5-Ducati/10852-Scrambler_1100_Tribute_PRO/006-638404743476558256-ducati-scrambler-1100-tribute-pro.jpg?format=webp&quality=80&width=1200&height=790&bgcolor=rgba_39_42_44_0&mode=pad" alt="Ducati Motorcycle" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Ducati Scrambler</h5>
+                        <p class="card-text">Join the adventure with the versatile and stylish Ducati Scrambler.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpKH8YSjL7NwzO_TgWQSCCAHBmuOykfvjLFU8uR3BB76h3BpHg64QDMD-F4c_Zo91h-uE&usqp=CAU" alt="Custom Image" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Custom Ride</h5>
+                        <p class="card-text">Discover the unique features of our custom bikes tailored for your adventure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-lg-4 mb-4 text-center">
+                <i class="fas fa-map-marked-alt fa-3x mb-2"></i>
+                <h5>Explore New Routes</h5>
+                <p>Find the best routes and scenic paths for an unforgettable ride.</p>
+            </div>
+            <div class="col-lg-4 mb-4 text-center">
+                <i class="fas fa-tools fa-3x mb-2"></i>
+                <h5>Top-notch Maintenance</h5>
+                <p>Our bikes are maintained to the highest standards to ensure your safety and comfort.</p>
+            </div>
+            <div class="col-lg-4 mb-4 text-center">
+                <i class="fas fa-users fa-3x mb-2"></i>
+                <h5>Community Events</h5>
+                <p>Join our community events and meet fellow biking enthusiasts.</p>
+            </div>
+        </div>
+        <p class="mt-4">For Admin Access Only:</p>
+        <a class="btn btn-secondary btn-lg" asp-page="/UserAdmiistrationPages/Userlist">Our Clients (Admin Only)</a>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+﻿@page
+@model onion_architeture.Pages.MorocyclePages.InsuranceDetailsModel
+
+<div>
+    <h4>insurance information from the dealer </h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Insurance.Motorcycle)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Insurance.Motorcycle.Brand)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Insurance.InsuranceCost)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Insurance.InsuranceCost)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Insurance.StartDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Insurance.StartDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Insurance.EndDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Insurance.EndDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    @* <a asp-page="./Edit" asp-route-id="@Model.Insurance.InsuranceNumber">Edit</a> | *@
+    <a asp-page="./Motorlist">Back to List</a>
+</div>

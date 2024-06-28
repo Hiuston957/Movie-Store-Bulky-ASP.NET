@@ -1,0 +1,33 @@
+﻿@page
+@model onion_architeture.Pages.UserAdmiistrationPages.DetailsUserMotorModel
+
+<div>
+    <h4>Client's Motorcycles</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Motorcycles:
+        </dt>
+        <dd class="col-sm-10">
+            @if (Model.Motorcycles.Any())
+            {
+                <ul>
+                    @foreach (var motorcycle in Model.Motorcycles)
+                    {
+                        <li>
+                            @Html.DisplayFor(m => motorcycle.Brand) - @Html.DisplayFor(m => motorcycle.Model) - @Html.DisplayFor(m => motorcycle.Price) USD
+                            <a asp-page="./UserMotorDell" asp-route-clientId="@Model.Client.Id" asp-route-motorcycleId="@motorcycle.Id" class="btn btn-danger">Return to store</a>
+                        </li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>No motorcycles to display</p>
+            }
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./UserList">Back to List</a>
+</div>
